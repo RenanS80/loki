@@ -4,6 +4,10 @@ h1 {
     font-size: 96px;
     line-height: 117px;
     text-transform: uppercase;
+
+    @media (max-width: 510px) {
+        font-size: 58px;
+    }
 }
 
 h4 {
@@ -20,6 +24,10 @@ p {
     font-weight: normal;
     font-size: 20px;
     line-height: 32px;
+
+    @media (max-width: 510px) {
+        font-size: 18px;
+    }
 }
 
 a {

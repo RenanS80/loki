@@ -13,6 +13,8 @@
 body {
     font-family: 'B612', sans-serif;
     color: $white;
+    min-height: 100vh;
 }
+
 
 @import 'partials/main';

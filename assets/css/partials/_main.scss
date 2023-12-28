@@ -13,24 +13,18 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        padding: 0 15px;
 
         @media (max-width: 510px) {
             justify-content: space-between;
+            padding: 0;
         }
         
         .main-title {
             text-align: center;
 
             @media (max-width: 510px) {
-                margin-top: 20px;
-            }
-
-            h1 {
-                margin-top: 35px;
-
-                @media (max-width: 690px) {
-                    margin-top: 5px;
-                }
+                margin-top: 45px;
             }
         }
 
@@ -45,6 +39,10 @@ main {
 
             @media (max-width: 510px) {
                 gap: 20px;
+                margin-bottom: 0;
+                background-color: $black;
+                padding: 32px;
+                border-radius: 16px 16px 0px 0px;
             }
 
             .movie-cover {
@@ -52,8 +50,7 @@ main {
                 height: 280px;
 
                 @media (max-width: 510px) {
-                    width: 180px;
-                    height: 225px;
+                    display: none;
                 }
 
                 img {
@@ -65,20 +62,33 @@ main {
             .movie-extra {
                 max-width: 722px;
 
+                .movie-stars {
+                    display: flex;
+                    gap: 12px;
+
+                    @media (max-width: 510px) {
+                        gap: 6px;
+                    }
+
+                    img {
+                        
+                        @media (max-width: 510px) {
+                            width: 19px;
+                            height: 19px;
+                        }
+                    }
+                }
+
                 .movie-duration-star {
-                    width: 80%;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding-top: 42px;
-
-                    @media (max-width: 690px) {
-                        width: 90%;
-                    }
+                    margin-top: 42px;
 
                     @media (max-width: 510px) {
-                        flex-direction: column;
                         gap: 12px;
+                        margin: 32px 0 55px 0;
+                        width: 100%;
                     }
 
                     @media (max-width: 370px) {
@@ -88,6 +98,14 @@ main {
                     .movie-duration {
                         display: flex;
                         align-items: center;
+                        font-weight: 600;
+
+                        img {
+                            @media (max-width: 510px) {
+                                width: 19px;
+                                height: 19px;
+                            }
+                        }
 
                         p {
                             padding-left: 15px;
@@ -96,25 +114,27 @@ main {
                 }
 
                 .group-buttons {
-                    margin-top: 60px;
+                    margin-top: 50px;
                     text-transform: uppercase;
-                    font-family: "Open Sans", sans-serif;
                     font-weight: bold;
-                    line-height: 21.79px;
+                    display: flex;
+                    gap: 32px;
 
-                    @media (max-width: 370px) {
-                        display: flex;
+                    @media only screen and (min-device-width: 511px) and (max-device-width: 1024px) {
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    @media (max-width: 510px) {
                         flex-direction: column;
-                        align-items: flex-start; 
-                        gap: 15px;
-                        margin-top: 40px;
-                        
+                        text-align: center;
                     }
 
                     .watch-now,
                     .trailer {
                         border-radius: 3px;
                         transition: all 0.4s ease;
+                        padding: 16px 32px;
 
                         &:hover {
                             opacity: 0.8;
@@ -122,15 +142,12 @@ main {
                     }
 
                     .watch-now {
-                        padding: 16px 27px;
                         background: $blue;
                     }
 
                     .trailer {
-                        padding: 15px 25px;
                         background: $black;
                         border: 1px solid $white;
-                        margin-left: 22px;
 
                         @media (max-width: 370px) {
                             margin-left: 0px;
